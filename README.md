@@ -3,7 +3,7 @@ Welcome to mEEG README file!!
 **mEEG** is a MATLAB GUI-based pipeline for EEG preprocessing, qEEG analysis, spike analysis, spike-wave-discharge (SWD) analysis, event detection, and connectivity/coherence visualization. This README is intended to serve as the central place to document version-specific changes, known fixes, output behavior, and future updates.
 
 
-Current tracked version: **mEEG v1.102**  
+Current tracked version: **mEEG v1.103**  
 Last README update: **2026-06-24**
 
 ---
@@ -106,6 +106,22 @@ Future updates should continue adding important settings to these logs, especial
 ---
 
 ## 7. Version changelog
+
+### mEEG v103 patch notes
+
+Base: v102 spike/event EDF viewer plot fix.
+
+Changes:
+1. Event Viewer now has an Event type filter, including mixed abnormality.
+2. Event Detection now labels events as mixed abnormality when two or more feature families exceed their thresholds within the merged event: RMS, line length, spike-rate, and rhythmicity.
+3. Event Detection event tables now include PrimaryReason and FeatureCount columns for mixed events.
+4. Event Analysis mixed abnormality filtering now works for newly generated mixed events and also for older event tables when multiple z-score feature columns exceed the current GUI thresholds.
+5. Event Viewer plots now show only the raw trace. The blue filtered display trace was removed.
+6. Fixed the Spike Analysis Save plot and data syntax error in core/meeg_plot_spike_group_counts.m caused by the invalid MATLAB operator !=.
+
+Toolbar note:
+MATLAB's built-in UIAxes toolbar is top-right anchored. R2026a exposes ToolbarLocation for inside/outside/container placement, but not left-vs-right anchoring, so this patch does not attempt an unsupported left-corner move.
+
 
 ### v102 - Spike/Event EDF viewer and one-electrode plot fix
 
