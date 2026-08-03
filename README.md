@@ -3,7 +3,7 @@ Welcome to mEEG README file!!
 **mEEG** is a MATLAB GUI-based pipeline for EEG preprocessing, qEEG analysis, spike analysis, spike-wave-discharge (SWD) analysis, event detection, and connectivity/coherence visualization. This README is intended to serve as the central place to document version-specific changes, known fixes, output behavior, and future updates.
 
 
-Current tracked version: **mEEG v1.117  
+Current tracked version: **mEEG v1.118  
 Last README update: **2026-06-24**
 
 ---
